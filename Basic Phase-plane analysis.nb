@@ -1,0 +1,169 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6268,        159]
+NotebookOptionsPosition[      5851,        143]
+NotebookOutlinePosition[      6186,        158]
+CellTagsIndexPosition[      6143,        155]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"phy_", ",", "gamma_"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"Sin", "[", "phy", "]"}]}], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"gamma", "*", 
+       RowBox[{"Cos", "[", "phy", "]"}]}], "-", "1"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"phyPrime", "[", "omega_", "]"}], " ", "=", " ", "omega"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"omegaPrime", "[", 
+    RowBox[{"phy_", ",", "epsilon_", ",", "gamma_"}], "]"}], "=", 
+   RowBox[{
+    FractionBox["1", "epsilon"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"f", "[", 
+       RowBox[{"phy", ",", "gamma"}], "]"}], "-", "omega"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{"StreamPlot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"phyPrime", "[", "omega", "]"}], ",", 
+        RowBox[{"omegaPrime", "[", 
+         RowBox[{"phy", ",", "epsilon", ",", "gamma"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"phy", ",", 
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"omega", ",", 
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+      RowBox[{"StreamPoints", "\[Rule]", "10000"}], ",", 
+      RowBox[{"Axes", "\[Rule]", "True"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"epsilon", ",", "1*^-10", ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"gamma", ",", "0", ",", "5"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.733064192480372*^9, 3.733064344437351*^9}, {
+  3.733064529479041*^9, 3.7330646926183653`*^9}, {3.7330647428853188`*^9, 
+  3.733064888139905*^9}, {3.733064944131864*^9, 3.733065084483293*^9}, {
+  3.733065136530314*^9, 3.733065139072116*^9}, {3.7330652385690327`*^9, 
+  3.7330652819206553`*^9}, {3.733065372315936*^9, 3.733065470818583*^9}, {
+  3.733065548682501*^9, 3.733065577675015*^9}, {3.733065629453555*^9, 
+  3.733065660211656*^9}, {3.733065803929963*^9, 3.733065843606122*^9}, {
+  3.733065911999598*^9, 3.733065922587145*^9}, {3.733066093487153*^9, 
+  3.733066095018581*^9}, {3.733066151900877*^9, 3.733066171082121*^9}},
+ CellLabel->
+  "In[348]:=",ExpressionUUID->"de4a4199-55fd-4bcc-bdf3-35d0b63ba2d1"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`epsilon$$ = 
+    0.7400000000926, $CellContext`gamma$$ = 4.2, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`epsilon$$], 
+      Rational[1, 10000000000], 10}, {
+      Hold[$CellContext`gamma$$], 0, 5}}, Typeset`size$$ = {
+    360., {178., 184.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`epsilon$273273$$ = 
+    0, $CellContext`gamma$273274$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`epsilon$$ = 
+        Rational[1, 10000000000], $CellContext`gamma$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`epsilon$$, $CellContext`epsilon$273273$$, 0], 
+        Hold[$CellContext`gamma$$, $CellContext`gamma$273274$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        StreamPlot[{
+          $CellContext`phyPrime[$CellContext`omega], 
+          $CellContext`omegaPrime[$CellContext`phy, $CellContext`epsilon$$, \
+$CellContext`gamma$$]}, {$CellContext`phy, -5, 5}, {$CellContext`omega, -5, 
+          5}, StreamPoints -> 10000, Axes -> True]], 
+      "Specifications" :> {{$CellContext`epsilon$$, 
+         Rational[1, 10000000000], 10}, {$CellContext`gamma$$, 0, 5}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {234., 241.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.733064693797428*^9, {3.7330647477352953`*^9, 3.733064780837204*^9}, 
+   3.733064813624929*^9, {3.7330648679977007`*^9, 3.73306488980338*^9}, {
+   3.733064946128768*^9, 3.7330649885597353`*^9}, {3.733065032046781*^9, 
+   3.733065084877099*^9}, 3.733065139570532*^9, 3.733065248501251*^9, 
+   3.733065282526898*^9, {3.733065377033741*^9, 3.733065383190708*^9}, {
+   3.7330654167606297`*^9, 3.733065471232469*^9}, {3.7330655554905*^9, 
+   3.7330655783233337`*^9}, {3.733065637790308*^9, 3.733065661877007*^9}, {
+   3.733065805116124*^9, 3.733065843965384*^9}, 3.7330660955309267`*^9, {
+   3.7330661572731133`*^9, 3.733066171905121*^9}},
+ CellLabel->
+  "Out[351]=",ExpressionUUID->"730853a7-e6b5-4515-a50e-b700d1d56b5a"]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{Automatic, 194}, {34, Automatic}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2338, 60, 201, "Input",ExpressionUUID->"de4a4199-55fd-4bcc-bdf3-35d0b63ba2d1"],
+Cell[2921, 84, 2914, 56, 527, "Output",ExpressionUUID->"730853a7-e6b5-4515-a50e-b700d1d56b5a"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
