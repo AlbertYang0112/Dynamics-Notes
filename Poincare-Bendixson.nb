@@ -1,0 +1,221 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9649,        213]
+NotebookOptionsPosition[      9132,        196]
+NotebookOutlinePosition[      9470,        211]
+CellTagsIndexPosition[      9427,        208]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"lim", "=", "5"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Micro]", "=", "param"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"sysr", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"r", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           SuperscriptBox["r", "2"]}], ")"}]}], "+", 
+        RowBox[{"\[Micro]", "*", "r", "*", 
+         RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], ",", " ", "1"}], "}"}]}], 
+    ";", "\[IndentingNewLine]", 
+    "\"\<drZero = r/.Solve[sysr[[1]]\[Equal]0,r][[3]]\>\"", ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"rlimxy", " ", "=", " ", 
+     RowBox[{"TransformedField", "[", 
+      RowBox[{
+       RowBox[{"\"\<Polar\>\"", "\[Rule]", "\"\<Cartesian\>\""}], ",", " ", 
+       RowBox[{"sysr", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"r", ",", "\[Theta]"}], "}"}], "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"sysxy", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"TransformedField", "[", 
+       RowBox[{
+        RowBox[{"\"\<Polar\>\"", "\[Rule]", "\"\<Cartesian\>\""}], ",", " ", 
+        "sysr", ",", " ", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"r", ",", "\[Theta]"}], "}"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}]}]}], "]"}], "//", "Simplify"}]}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"regPlot", " ", "=", " ", 
+     RowBox[{"RegionPlot", "[", 
+      RowBox[{
+       RowBox[{"rlimxy", " ", ">", " ", "0"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "lim"}], ",", "lim"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", 
+         RowBox[{"-", "lim"}], ",", "lim"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"sPlot", " ", "=", " ", 
+     RowBox[{"StreamPlot", "[", 
+      RowBox[{"sysxy", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "lim"}], ",", "lim"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", 
+         RowBox[{"-", "lim"}], ",", "lim"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{"regPlot", ",", " ", "sPlot"}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"param", ",", " ", "0", ",", " ", "2"}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]}], "Input",
+ CellChangeTimes->{{3.761891827747363*^9, 3.761891884564804*^9}, {
+   3.761891923451509*^9, 3.761892007745289*^9}, {3.761892102992628*^9, 
+   3.7618922699968433`*^9}, {3.761892311134396*^9, 3.7618923123180304`*^9}, {
+   3.761892373616177*^9, 3.761892463679763*^9}, {3.7618926303880377`*^9, 
+   3.761892752659401*^9}, {3.761892785360958*^9, 3.761892789184013*^9}, {
+   3.7618950086061907`*^9, 3.761895012478401*^9}, {3.761895055020967*^9, 
+   3.76189507216696*^9}, {3.7618955093277607`*^9, 3.7618955455365334`*^9}, {
+   3.761895617200265*^9, 3.7618957393927717`*^9}, {3.761895788117593*^9, 
+   3.761895804711795*^9}, {3.761895918107403*^9, 3.761895930798457*^9}, {
+   3.7618961553025007`*^9, 3.7618961662504663`*^9}, {3.7618962062396097`*^9, 
+   3.761896206369732*^9}, 3.7618962393805733`*^9, {3.7618962812473*^9, 
+   3.761896305282138*^9}, 3.761896458580748*^9, {3.761896519710219*^9, 
+   3.761896556814814*^9}, {3.761909798598414*^9, 3.7619098820411386`*^9}, {
+   3.761910014131524*^9, 3.7619100238031*^9}, {3.7619101151144133`*^9, 
+   3.761910161837816*^9}, {3.761910201643773*^9, 3.761910215238682*^9}, {
+   3.761910479012953*^9, 3.761910479350541*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"ef7602eb-06be-45c2-81d6-57db789ff733"],
+
+Cell[BoxData["5"], "Output",
+ CellChangeTimes->{
+  3.761892105233652*^9, {3.7618921460601*^9, 3.761892166423481*^9}, 
+   3.761892201788452*^9, {3.761892234441354*^9, 3.761892258693551*^9}, {
+   3.761892401087825*^9, 3.7618924644774446`*^9}, {3.761892650834016*^9, 
+   3.761892753216339*^9}, 3.7618927896848993`*^9, 3.761895012954443*^9, 
+   3.761895072621558*^9, 3.761895545874585*^9, {3.761895687322823*^9, 
+   3.761895739832261*^9}, {3.761895790162863*^9, 3.761895805352722*^9}, 
+   3.761895920775044*^9, 3.761896120906513*^9, {3.761896156188261*^9, 
+   3.761896166986936*^9}, 3.7618962073238163`*^9, 3.761896240741893*^9, {
+   3.76189628223221*^9, 3.761896306413774*^9}, 3.7618964592309027`*^9, {
+   3.761896535367906*^9, 3.761896557365532*^9}, {3.7619098190380297`*^9, 
+   3.7619098829165382`*^9}, 3.761910025472129*^9, {3.7619101197386227`*^9, 
+   3.761910162423401*^9}, {3.761910206030897*^9, 3.7619102157858*^9}, 
+   3.761910383864832*^9, 3.7619104800022717`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"d1e6632d-be41-4401-979b-ba0553320dba"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`param$$ = 1.315, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`param$$], 0, 2}}, Typeset`size$$ = {
+    360., {178., 184.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`param$29641$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`param$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`param$$, $CellContext`param$29641$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`\[Micro] = $CellContext`param$$; \
+$CellContext`sysr = {$CellContext`r (
+            1 - $CellContext`r^2) + $CellContext`\[Micro] $CellContext`r 
+           Cos[$CellContext`\[Theta]], 1}; 
+       "drZero = r/.Solve[sysr[[1]]\[Equal]0,r][[3]]"; $CellContext`rlimxy = 
+        TransformedField["Polar" -> "Cartesian", 
+          
+          Part[$CellContext`sysr, 
+           1], {$CellContext`r, $CellContext`\[Theta]} -> {$CellContext`x, \
+$CellContext`y}]; $CellContext`sysxy = Simplify[
+          TransformedField[
+          "Polar" -> 
+           "Cartesian", $CellContext`sysr, {$CellContext`r, $CellContext`\
+\[Theta]} -> {$CellContext`x, $CellContext`y}]]; $CellContext`regPlot = 
+        RegionPlot[$CellContext`rlimxy > 
+          0, {$CellContext`x, -$CellContext`lim, $CellContext`lim}, \
+{$CellContext`y, -$CellContext`lim, $CellContext`lim}]; $CellContext`sPlot = 
+        StreamPlot[$CellContext`sysxy, {$CellContext`x, -$CellContext`lim, \
+$CellContext`lim}, {$CellContext`y, -$CellContext`lim, $CellContext`lim}]; 
+       Show[$CellContext`regPlot, $CellContext`sPlot]), 
+      "Specifications" :> {{$CellContext`param$$, 0, 2}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {222., 229.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.761892105233652*^9, {3.7618921460601*^9, 3.761892166423481*^9}, 
+   3.761892201788452*^9, {3.761892234441354*^9, 3.761892258693551*^9}, {
+   3.761892401087825*^9, 3.7618924644774446`*^9}, {3.761892650834016*^9, 
+   3.761892753216339*^9}, 3.7618927896848993`*^9, 3.761895012954443*^9, 
+   3.761895072621558*^9, 3.761895545874585*^9, {3.761895687322823*^9, 
+   3.761895739832261*^9}, {3.761895790162863*^9, 3.761895805352722*^9}, 
+   3.761895920775044*^9, 3.761896120906513*^9, {3.761896156188261*^9, 
+   3.761896166986936*^9}, 3.7618962073238163`*^9, 3.761896240741893*^9, {
+   3.76189628223221*^9, 3.761896306413774*^9}, 3.7618964592309027`*^9, {
+   3.761896535367906*^9, 3.761896557365532*^9}, {3.7619098190380297`*^9, 
+   3.7619098829165382`*^9}, 3.761910025472129*^9, {3.7619101197386227`*^9, 
+   3.761910162423401*^9}, {3.761910206030897*^9, 3.7619102157858*^9}, 
+   3.761910383864832*^9, 3.761910480046467*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"9a18f96f-b600-4ee2-b1a6-9f9282335963"]
+}, Open  ]]
+},
+WindowSize->{1920, 1056},
+WindowMargins->{{-1920, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3840, 86, 308, "Input",ExpressionUUID->"ef7602eb-06be-45c2-81d6-57db789ff733"],
+Cell[4423, 110, 1048, 15, 35, "Output",ExpressionUUID->"d1e6632d-be41-4401-979b-ba0553320dba"],
+Cell[5474, 127, 3642, 66, 470, "Output",ExpressionUUID->"9a18f96f-b600-4ee2-b1a6-9f9282335963"]
+}, Open  ]]
+}
+]
+*)
+
